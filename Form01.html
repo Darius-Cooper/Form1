@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Form Example 1</title>
+      <link rel="stylesheet" type="text/css" href="form.css">
+</head>
+
+<body>
+
+<form name = "mainFrom" onsubmit="return false">
+
+<!--       The <fieldset> tag is used to group related elements in a form. -->
+	<fieldset id="custInfo">
+    <!--       The <legend> tag is puts a title on this subset of the form -->
+    <legend>Customer Information</legend>
+    <!--       for= some id connects the lable to to the input box -->
+   <label for="custname"> Name:</label> 
+    <input name="custname" id="custname" placeholder="last name" type="text" />
+    
+    <label for="city">City:</label>
+    <select name= "cityList" id="cityList" size="1"></select>
+   
+    
+     <label for="paytype"></label>Payment Preference</label>
+    <select name="paytype" id="paytype" size="1">
+    <option value="Cash" selected="selected">Cash</option>
+    <option value="Credit">Visa or MC></option>
+    <option value="Debit" >Debit Card</option>
+    </select> 
+    <!-- here we submit to a local js file -->
+
+    <input type="submit" value="Submit" onclick="formSubmitEvent()">
+    
+    </fieldset>
+    
+	<fieldset id="custList">
+   <h3>My Customers</h3>
+   <ul id="list"></ul>
+   </fieldset>
+
+
+
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
